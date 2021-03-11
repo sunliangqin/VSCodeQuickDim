@@ -1,0 +1,62 @@
+{
+  "name": "quick-dim",
+  "displayName": "Quick Dim",
+  "description": "Enables you to dim your source code to mark it as read.",
+  "version": "1.0.0",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.54.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "repository": {
+    "url": "https://github.com/sunliangqin/VSCodeQuickDim.git"
+  },
+  "activationEvents": [
+    "onCommand:quickDim.dim"
+  ],
+  "main": "./out/extension.js",
+  "icon": "assets/icon.png",
+  "contributes": {
+    "commands": [
+      {
+        "command": "quickDim.dim",
+        "title": "Dim Selected Ranges"
+      }
+    ],
+    "configuration":[
+      {
+        "title": "Quick Dim",
+        "properties": {
+          "quickDim.opacity": {
+            "type": "number",
+            "default": 0.5,
+            "description": "Opacity of dimmed text"
+          }
+        }
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/glob": "^7.1.3",
+    "@types/mocha": "^8.0.4",
+    "@types/node": "^12.11.7",
+    "@types/vscode": "^1.54.0",
+    "@typescript-eslint/eslint-plugin": "^4.14.1",
+    "@typescript-eslint/parser": "^4.14.1",
+    "eslint": "^7.19.0",
+    "glob": "^7.1.6",
+    "mocha": "^8.2.1",
+    "typescript": "^4.1.3",
+    "vscode-test": "^1.5.0"
+  }
+}
