@@ -16,6 +16,7 @@
   "activationEvents": [
     "onCommand:quickDim.dim"
   ],
+  "publisher": "Liangqin",
   "main": "./out/extension.js",
   "icon": "assets/icon.png",
   "contributes": {
