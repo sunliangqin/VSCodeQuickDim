@@ -2,7 +2,7 @@
   "name": "quick-dim",
   "displayName": "Quick Dim",
   "description": "Enables you to dim your source code to mark it as read.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "license": "MIT",
   "engines": {
     "vscode": "^1.54.0"
@@ -26,7 +26,7 @@
         "title": "Dim Selected Ranges"
       }
     ],
-    "configuration":[
+    "configuration": [
       {
         "title": "Quick Dim",
         "properties": {
